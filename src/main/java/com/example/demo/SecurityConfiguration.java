@@ -21,9 +21,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
                 .formLogin()
                 .and().httpBasic();
     }
-   /* protected void configure(AuthenticationManagerBuilder auth)
-        throws Exception{
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth)
+        throws Exception {
         auth.inMemoryAuthentication().
                 withUser("user").password("password").roles("USER");
-    }*/
+    }
 }
